@@ -1,0 +1,13 @@
+<div class="home">
+    <button class="btn btn-nav">
+        <fa-icon class="icon arrow" size="lg" [icon]="faChevronLeft"></fa-icon>
+        <p>Volver</p>
+    </button>
+    <div class="wrapper">
+        <div class="title">
+            <h2>Tickets</h2>
+        </div>
+        <app-ticket *ngFor="let ticket of tickets" [ticket]="ticket" [id]="ticket.ticketId"></app-ticket>
+    </div>
+    <app-footer></app-footer>
+</div>

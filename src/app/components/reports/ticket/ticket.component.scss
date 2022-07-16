@@ -1,0 +1,94 @@
+hr {
+    height: 1px;
+    background: #EBEBEB;
+    border: none;
+    margin: 0;
+}
+
+.ticket {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    background-color: white;
+
+    .ticket-data {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+        width: 280px;
+
+        p {
+            margin: 0px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #474747;
+        }
+    }
+
+    .ticket-body {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 10px;
+        width: 280px;
+
+        .body {
+            align-self: flex-start;
+            width: 90%;
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 5px 0 0 0;
+                width: 260px;
+
+                span {
+                    margin: 0px;
+                    font-size: 14px;
+                    color: #474747;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    &.subject {
+                        font-weight: 600;
+                    }
+
+                    &.status {
+                        margin-right: 5px;
+                        padding: 2px 3px;
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: white;
+                        border-radius: 4px;
+                        background: #E4524D;
+                    }
+                }
+            }
+        }
+
+        .btn {
+            width: 10%;
+            height: 40px;
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                padding: 0;
+                background: none;
+                border: none;
+
+                .icon {
+                    color: #E4524D;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+<hr>
+<div class="ticket">
+    <div class="ticket-data">
+        <p>De: {{ this.ticket.from }}</p>
+        <p>Enviado: {{ this.ticket.date | formatDate }}</p>
+    </div>
+    <div class="ticket-body">
+        <div class="body">
+            <div class="row">
+                <span class="status" data-source="this.ticket.status" [ngStyle]="{'background': this.statusBackground}">{{ this.ticket.status | translateStatus}}</span>
+                <span class="subject">{{ this.ticket.subject }}</span>
+            </div>
+            <div class="row">
+                <span>{{ this.ticket.body }}</span>
+            </div>
+        </div>
+        <div class="btn">
+            <button>
+                <fa-icon class="icon" size="lg" [icon]="faChevronRight"></fa-icon>
+            </button>
+        </div>
+    </div> 
+</div> 
