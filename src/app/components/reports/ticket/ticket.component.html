@@ -1,6 +1,6 @@
 <hr>
 <div class="ticket">
-    <div class="ticket-data">
+    <div class="ticket-data" *ngIf="this.ticket.status !== this.ticketStatus.SOLVED">
         <p>De: {{ this.ticket.from }}</p>
         <p>Enviado: {{ this.ticket.date | formatDate }}</p>
     </div>
@@ -11,7 +11,12 @@
                 <span class="subject">{{ this.ticket.subject }}</span>
             </div>
             <div class="row">
-                <span>{{ this.ticket.body }}</span>
+                <span *ngIf="this.ticket.status !== this.ticketStatus.SOLVED else showDate">{{ this.ticket.body }}</span>
+                <ng-template #showDate>
+                    <span class="date" *ngIf="this.ticket.status === this.ticketStatus.SOLVED">
+                        {{ this.ticket.date | formatDate }}
+                    </span>
+                </ng-template>
             </div>
         </div>
         <div class="btn">

@@ -7,11 +7,11 @@ hr {
 
 .ticket {
     width: 310px;
+    height: 85px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 15px 0;
     background-color: white;
 
     .ticket-data {
@@ -68,6 +68,11 @@ hr {
                         color: white;
                         border-radius: 4px;
                         background: #E4524D;
+                    }
+
+                    &.date {
+                        color: #474747;
+                        font-size: 12px;
                     }
                 }
             }
